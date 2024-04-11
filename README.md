@@ -100,16 +100,49 @@
 <br/>  
 
 
-## Github Stats  
-<img src="https://github-readme-stats.vercel.app/api?username=Jayboi78&show_icons=true&count_private=true&hide_border=true" align="left" />  
+## Github Stats
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jayboi78&hide_border=true&layout=compact" align="left" />  
+<img src="https://github-readme-stats.vercel.app/api?username=Jayboi78&show_icons=true&count_private=true&hide_border=true" align="left" />
 
-<br/>  
+<!-- Modify the URL below to include the `&hide=html,css` query parameter if you want to hide specific languages -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jayboi78&hide_border=true&layout=compact" align="left" />
 
-![Listening to on Spotify](https://spotify-github-profile.vercel.app/api/view?uid=jaylinjohnson86&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=false)  
+<!-- Add a script tag to fetch the dynamic data from the GitHub API -->
+<script>
+fetch('https://api.github.com/users/Jayboi78/repos')
+  .then(response => response.json())
+  .then(data => {
+    const languages = {};
+    data.forEach(repo => {
+      if (repo.language && repo.size > 0) {
+        if (!languages[repo.language]) {
+          languages[repo.language] = 0;
+        }
+        languages[repo.language] += repo.size;
+      }
+    });
+    const sortedLanguages = Object.entries(languages)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5);
+    const languageIcons = {
+      // Add icons for each language if needed
+      'JavaScript': 'https://profilinator.rishav.dev/skills-assets/javascript-original.svg',
+      'HTML': 'https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg',
+      'CSS': 'https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg',
+      // Add more as necessary
+    };
+    const languageList = document.createElement('div');
+    languageList.style.textAlign = 'center';
+    sortedLanguages.forEach(([language, size]) => {
+      const iconUrl = languageIcons[language] || 'https://profilinator.rishav.dev/skills-assets/blank.png';
+      languageList.innerHTML += `<img style="margin: 10px" src="${iconUrl}" alt="${language}" height="75" title="${language}" />`;
+    });
+    document.querySelector('img[src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jayboi78"]').insertAdjacentElement('afterend', languageList);
+  })
+  .catch(error => console.error(error));
+</script>
 
-<br/>  
+<br clear="left" />
 
 
 <br />
