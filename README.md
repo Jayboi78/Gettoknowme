@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Ffancyfurret%2Fart%2FPikachu-Waving-Gif-453504782&psig=AOvVaw1OEIqYocSEdMqDlhQccx72&ust=1712886470233000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiKnMOFuYUDFQAAAAAdAAAAABAE" align="center" style="width: 100%" />
+<img src="d7i06j2-209054b9-be1e-46b0-aa61-ffbe4dc1ebda.gif" align="center" style="width: 100%" />
 </div>  
   
 
